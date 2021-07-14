@@ -1,0 +1,203 @@
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  @include MullerRegular();
+  margin: 0;
+  color: #333333;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-weight: inherit;
+}
+
+h3 {
+  font-weight: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  pointer-events: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.button--option {
+  font-size: 16px;
+  line-height: 19px;
+  @include RobotoRegular();
+  color: #2F80ED;
+  text-align: center;
+  border: 2px solid #2F80ED;
+  border-radius: 8px;
+  padding: 11px 20px;
+  background: transparent;
+  outline: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.button--primary {
+  @include MullerBold();
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #2F80ED;
+  box-shadow: 4px 12px 40px rgba(47, 128, 237, 0.35);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+
+.section__header {
+  text-align: center;
+}
+
+.section__title {
+  font-size: 38px;
+  @include MullerBold();
+  color: #000000;
+  line-height: 1.2;
+}
+
+.section__subtitle {
+  font-size: 16px;
+  @include MullerRegular();
+  color: #4F4F4F;
+  margin-top: 12px;
+}
+
+.alert--primary {
+  padding: 22px 20% 28px 20%;
+  background: #FFCF10;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+
+  &__icon {
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    margin-right: 31px;
+
+    img {
+      max-width: 40px;
+      max-height: 40px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    @include MullerRegular();
+  }
+}
+
+@media (max-width: 1200px) {
+  .alert--primary {
+    padding: 22px 10% 28px 10%;
+  }
+
+  .section__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .alert--primary {
+    padding: 22px 7% 28px 7%;
+  }
+
+  .section__title {
+    font-size: 28px;
+  }
+
+  .section__subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .alert--primary {
+    &__icon {
+      margin-right: 16px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  .section__title {
+    font-size: 23px;
+  }
+}

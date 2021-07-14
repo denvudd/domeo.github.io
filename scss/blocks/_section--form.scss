@@ -1,0 +1,107 @@
+.section--form {
+  padding-top: 96px;
+
+  &__title {
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    @include MullerMedium();
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 46px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 384px;
+    width: 100%;
+    margin-right: 32px;
+
+
+    &__label {
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+
+    &__input {
+      border: 1px solid #828282;
+      border-radius: 8px;
+      background: #FFFFFF;
+      outline: none;
+      padding: 17px 24px;
+
+      &::placeholder {
+        font-size: 16px;
+        color: #BDBDBD;
+      }
+    }
+
+    &__button {
+      display: flex;
+      margin-top: 27px;
+
+      &__text {
+        text-align: center;
+        font-size: 13px;
+        color: #000000;
+        margin-top: 12px;
+
+        a {
+          text-decoration: underline;
+          color: #2F80ED;
+        }
+      }
+    }
+  }
+}
+
+.section--form__button {
+  padding: 18px 40px;
+}
+
+@media (max-width: 1200px) {
+  .section--form__button {
+    padding: 6px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section--form__inner {
+    flex-wrap: wrap;
+  }
+
+  .section--form__button {
+    padding: 18px 40px;
+  }
+
+  .section--form__item {
+    margin: 10px auto;
+  }
+
+  .section--form__item__button {
+    margin-top: 0;
+  }
+
+  .section--form__button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section--form {
+    padding-top: 80px;
+  }
+
+  .section--form__title {
+    font-size: 14px;
+  }
+
+  .section--form__inner {
+    margin-top: 20px;
+  }
+}

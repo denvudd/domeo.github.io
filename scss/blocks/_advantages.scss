@@ -1,0 +1,109 @@
+.advantages {
+  padding-top: 96px;
+
+  &__inner {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    max-width: 592px;
+    height: 100px;
+    width: 100%;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-bottom: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    &__num {
+      text-align: center;
+      @include MullerBold();
+      font-size: 32px;
+      color: #2F80ED;
+      background: #FFFFFF;
+      border: 1px solid #E0E0E0;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      margin: 0 auto;
+      z-index: 100;
+      line-height: 1.9;
+
+      position: absolute;
+      content: '';
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 16px;
+      color: #000000;
+      margin-top: 38px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__alert__inner {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .advantages {
+    &__item {
+      max-width: 45%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .advantages {
+    &__item {
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .advantages {
+    &__item {
+      height: 140px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    &__item {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .advantages {
+    padding-top: 80px;
+
+    &__item {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      height: 120px;
+    }
+
+    &__alert__inner {
+      margin-top: 30px;
+    }
+  }
+}

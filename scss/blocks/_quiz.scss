@@ -1,0 +1,128 @@
+.quiz {
+  padding-top: 164px;
+}
+
+.quiz__inner {
+  border: 1px solid #2F80ED;
+  border-radius: 12px;
+  padding: 32px 25px 26px 25px;
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto 0px auto;
+}
+
+.quiz__item {
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 16px;
+    @include MullerBold();
+    color: #000000;
+  }
+
+  &__subtitle {
+    color: #4F4F4F;
+    font-size: 14px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 33px auto 0px auto;
+    max-width: 200px;
+    width: 100%;
+
+    &__box {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+
+      &__input {
+        width: 27px;
+        height: 27px;
+        margin-right: 12px;
+      }
+
+      &__label {
+        font-size: 16px;
+        color: #000000;
+      }
+    }
+  }
+}
+
+.quiz__panel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 59px;
+
+  &__inner__next {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__inner__prev {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__prev {
+    font-size: 16px;
+    color: #2F80ED;
+    border: 1px solid #2F80ED;
+    border-radius: 8px;
+    background: transparent;
+    padding: 8px 40px;
+    box-shadow: none;
+    margin-left: 60px;
+  }
+
+  &__next {
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 1px solid #2F80ED;
+    border-radius: 8px;
+    padding: 8px 40px;
+    box-shadow: none;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quiz {
+    padding-top: 98px;
+  }
+
+  .quiz__item {
+
+    &__title {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+    }
+  }
+
+  .quiz__panel {
+    margin-top: 49px;
+  }
+}
+
+@media (max-width: 568px) {
+  .quiz__panel__prev {
+    margin-left: 0;
+  }
+
+  .quiz__panel__next {
+    margin-right: 0;
+  }
+
+  .quiz__item__title {
+    line-height: 1.4;
+  }
+}
