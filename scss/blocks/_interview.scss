@@ -1,0 +1,125 @@
+.interview {
+    padding-top: 96px;
+}
+
+.interview__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.interview__col {
+    display: flex;
+    flex-direction: column;
+    margin-right: 104px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &__text {
+        font-size: 20px;
+        @include MullerBold();
+        color: #000000;
+        margin-bottom: 68px;
+    }
+
+    &__ul {
+        margin-top: 32px !important;
+        text-align: start;
+    }
+
+    &__li {
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin-bottom: 16px;
+        @include MullerRegular();
+
+        &__icon {
+            max-width: 40px;
+            width: 100%;
+            max-height: 40px;
+            height: 100%;
+            margin-right: 12px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        &__text {
+            font-size: 20px;
+            color: #000000;
+        }
+    }
+
+    &__alert {
+        padding: 22px 5% 28px 5%;
+    }
+
+    &__form__title {
+        text-align: center;
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    &__form__inner {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    &__form__item {
+        margin: 7px auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .interview__inner {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .interview__col {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            margin-bottom: 40px;
+        }
+
+        &__form__item {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .interview {
+        padding-top: 80px;
+    }
+
+    .interview__inner {
+        margin-top: 20px;
+    }
+
+    .interview__col {
+        &__text {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        &__li__text {
+            font-size: 16px;
+        }
+    }
+}
+

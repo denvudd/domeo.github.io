@@ -5,7 +5,7 @@
 /* Настройки сетки */
 @import 'blocks/grid';
 
-/* Хэдер */
+/* Шапка, хэдер */
 @import 'blocks/header';
 /* Интро */
 @import 'blocks/intro';
@@ -17,3 +17,13 @@
 @import 'blocks/section--form';
 /* Секция с опросом, секция quiz */
 @import 'blocks/quiz';
+/* Секция с устройством на работу, секция get-a-job */
+@import 'blocks/get-a-job';
+/* Секция "Честность", секция honestly */
+@import 'blocks/honesty';
+/* Секция с записью на собес., секция interview */
+@import 'blocks/interview';
+/* Секция с контактами, секция contacts */
+@import 'blocks/contacts';
+/* Подвал, футер */
+@import 'blocks/footer'
